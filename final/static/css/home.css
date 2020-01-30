@@ -1,0 +1,159 @@
+.bg {
+		  /* The image used */
+          
+		  
+		  /* Full height */
+		  height: 100vh; 
+			width:100%;
+			padding:0px;
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  padding-top:5%;
+		}
+		.jumbotron
+		{
+			text-align:center;
+			background-color:transparent;
+		}
+		.display-4
+		{
+			color:#edf4d2;
+			text-shadow:3px 4px 5px black;
+			font-weight:bold;
+			font-family: 'Abril Fatface', cursive;
+		}
+		p
+		{
+			color:white;		
+		}
+		.btn
+		{
+			background-color:transparent;
+			font-weight:bold;
+		}
+		.navbar
+		{
+			position:fixed;
+			background-color:transparent;
+			z-index:2;
+			width:100%;
+		}
+		.title
+		{
+			font-size:1.5em;
+			color:white;
+			font-weight:bold;
+		}
+		#navbarText
+		{
+			color:white;
+		}
+		li
+		{
+			color:red;
+			padding-left:3em;
+		}
+		#convertor
+		{
+			background-image: linear-gradient(to bottom, #ffffff, #7e999e);
+			width:100%;
+			padding-left:10%;
+			padding-right:10%;
+			margin-top:0px;
+		}
+		.icon
+		{
+			width:20em;
+		}
+		.icons
+		{
+			
+			background-color:red;
+			text-align:center;
+		}
+
+		#ml
+		{
+
+			height: 100vh; 
+			width:100%;
+			padding:0px;
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align:center;
+			margin-bottom:0px;
+			padding-top:3em;
+		}
+
+		#forms
+		{
+			text-align:center;
+			height:30em;
+
+			background-color:transparent;
+		}
+
+		#image1
+		{
+			width:40vw;
+			height:40vh;
+			border-radius:15px;
+			float:left;
+		}
+
+		#image2
+		{
+			width:20vw;
+			height:20vw;
+			border-radius:15px;
+            margin-left:0px;
+            margin-right:10%;
+			float:right;
+			margin-top:5em;
+			outline:2px white solid;
+		}
+
+		#head
+		{
+			font-size:1.5em;
+			color:black;
+        }
+        
+        .fm
+        {
+            float: left;
+			max-width:50em;
+			max-height:30em;
+			margin-left:5%;
+			margin-bottom:0px;
+			padding-top: 0em;
+			margin-top:10em;
+        }
+
+        .mf {
+			color:blue;  
+			border:5px #ddd dashed; 
+            padding:10vh 10vw; 
+            text-align:center middle;
+            margin:0px;
+        }
+
+        .mm
+        {
+            padding:0px;
+            max-width:50em;
+        }
+
+        #sub-btn
+        {
+
+			color: white;
+			border-color:white;
+        }
+
+     
+        

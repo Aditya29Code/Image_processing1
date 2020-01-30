@@ -1,0 +1,111 @@
+{% csrf_token %}
+{% load static %}
+{% csrf_token %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amarante&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>TRAFFIC SIGN RECOGNITION</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/home.css" %}">
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+	  <a class="title" style="color:white;" href="#">IMAGE-RECOGNITION</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse text-center" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item active">
+			<a class="nav-link" style="color:white; font-weight:bold;" href="#">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" style="color:white; font-weight:bold;" href="#">Features</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" style="color:white; font-weight:bold;" href="https://bhuvan.nrsc.gov.in/bhuvan_links.php">Bhuvan</a>
+		  </li>
+		</ul>
+		<span class="navbar-text" style="font-weight:bold; color:white;">
+		</span>
+	  </div>
+	</nav>
+	<div class="bg" style="background-image: url({% static "images/fourth"%}.jpg);">
+		<div class="jumbotron">
+		  <h1 class="display-4">AGE OF DATA</h1>
+		  <p class="lead" style="font-size:1.5em; font-weight:bold; color:#8c7331; text-shadow:1px 2px 4px black;">Extracting information from images and understanding them has become a necessity.<br> Hence the software classifies images into various fields automatically. </p>
+		  <p style="color:white; font-size:1.4em; font-weight:bold;"><i>"The most valuable commodity I know of is information."</i></p>
+		  <hr class="my-4">
+		  <br><br><br>
+		  <br><br><br>
+		  <br><br>
+		  <br><br>
+		  <a class="btn" style="color:white; border-color:white;" href="#convertor" role="button">Learn more</a>
+		</div>
+	</div>
+	<div id="convertor">
+		<div style="margin-top:15vh;">
+			<div class="row mb-5 align-items-center" >
+			  <div class="col-lg-7 mb-5" >
+				<img src="{% static "images/rocket@" %}2x.png" alt="Image" class="img-fluid">
+			  </div>
+			  <div class="col-lg-5 mr-auto order-2 order-lg-1" style="text-align:center;">
+				<p class="section-title" style="color:black; font-size:3em; font-weight:bold;">BHUVAN</p>
+				<h2 class="mb-8">Millions of photos are uploaded everyday on Bhuvan which require automated validation mechanisms for understanding the photographs and relevance of the purpose.</h2>
+
+			  </div>
+			</div>
+
+			<div class="row mb-5 align-items-center">
+			  <div class="col-lg-5 mb-7 order-1 order-lg-2" >
+				<img src="{% static "images/working@" %}2x.png" alt="Image" class="img-fluid">
+			  </div>
+			  <div class="col-lg-5 mr-auto order-2 order-lg-1" style="text-align:center;">
+				<p class="section-title" style="color:black; font-size:3em; font-weight:bold;">Traffic Sign Recognition</p>
+				<h2 class="mb-4">Traffic Signs are detected and recognized automatically. Many local apps, self driving cars can make use of this technology to automatically classify traffic signs and make further analysis.</h2>
+				</div>
+			  </div>
+		 </div> 
+	</div>
+	<div id="ml" style="background-image: url({% static "images/seventh"%}.jpg); height: 100vh; 
+			width:100%;
+			padding:0px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align:center;
+			margin-bottom:0px;
+			padding-top:3em;">
+		<h1 style="font-size:10vh; color:white; text-shadow:3px 5px 6px #423e3e; font-family: 'Abril Fatface', cursive;"><b>PUT IN THE IMAGES<b></h1>
+			<form class="fm" action="upload" method="POST" name="myfile">
+				<div class="mm">
+					{% csrf_token %}			
+						<input type="file" id="myfile" style="font-weight:bold;" class="mf" name="myfile" accept="image/*">
+						<br>
+						<br>
+						<br>
+						<input type="submit" class="btn" style="color: white;
+			border-color:white;" id="sub-btn" value="SUBMIT"></input>	
+			</div>
+			</form>
+		<img id="image2" type="image" src="{% static 'images/speeeeed' %}.png">		
+			<span style="color:white; float:right; margin-left:10%;margin-right:10%; font-size:1.5em; ">
+				{{ name }}
+			</span>
+	</div>
+
+    <script src="{% static 'https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"'%}"></script>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"'  %}"></script>
+    <script src="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"' %}"></script>
+	<script src="{% static "jquery-3.4.1.min.js" %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}">	</script>
+  </body>
+</html>
